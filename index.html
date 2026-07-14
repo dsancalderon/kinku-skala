@@ -34,7 +34,7 @@
                     <div class="badge-novis">No Vis</div>
                     <div class="badge-trophy"><i class="fa-solid fa-trophy"></i></div>
                     <div class="carousel-container">
-                        <img src="https://via.placeholder.com/600x400/dddddd/999999?text=Living+Room+Placeholder" alt="Apartamento" class="carousel-image">
+                        <img src="images/gen_hero.png" alt="Apartamento" class="carousel-image">
                         <div class="carousel-controls">
                             <i class="fa-solid fa-chevron-left"></i>
                             <i class="fa-solid fa-chevron-right"></i>
@@ -78,36 +78,16 @@
             
             <div class="registration-form">
                 <h3>Regístrate aquí y recibe 15’000.000 de descuento</h3>
-                <form>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label>Apellidos*</label>
-                            <input type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre*</label>
-                            <input type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Número de teléfono*</label>
-                            <div class="phone-group">
-                                <select><option>co ▼ +57</option></select>
-                                <input type="tel" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Email*</label>
-                            <input type="email" required>
-                        </div>
-                        <div class="form-checkbox">
-                            <input type="checkbox" required id="auth">
-                            <label for="auth">Acepto y otorgo mi autorización para el tratamiento de datos personales en los términos que aparecen a continuación <a href="#">aquí.</a>*</label>
-                        </div>
-                        <div class="form-submit">
-                            <button type="submit">Enviar</button>
-                        </div>
-                    </div>
-                </form>
+                <div id="hubspot-form-container" style="margin-top: 20px;"></div>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                  hbspt.forms.create({
+                    region: "na1",
+                    portalId: "49317434",
+                    formId: "c53ad587-9b5b-4b78-901f-63f83f70f852",
+                    target: "#hubspot-form-container"
+                  });
+                </script>
             </div>
         </div>
     </section>
@@ -120,28 +100,28 @@
         
         <div class="cards-container">
             <div class="card">
-                <img src="https://via.placeholder.com/300x200/dddddd/999999?text=Coworking" alt="Coworking" class="card-img">
+                <img src="images/gen_coworking.png" alt="Coworking" class="card-img">
                 <div class="card-content">
                     <h3 class="card-title">Coworking</h3>
                     <p class="card-desc">Un espacio pensado para impulsar tus ideas en un entorno moderno y colaborativo.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/300x200/dddddd/999999?text=Yoga+Gym" alt="Zona de Yoga y Gimnasio" class="card-img">
+                <img src="images/gen_yoga.png" alt="Zona de Yoga y Gimnasio" class="card-img">
                 <div class="card-content">
                     <h3 class="card-title">Zona de Yoga y Gimnasio</h3>
                     <p class="card-desc">Equipado para que cuides tu cuerpo y tu mente conectado con la naturaleza.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/300x200/dddddd/999999?text=Parque+Infantil" alt="Parque Infantil y Zona de Mascotas" class="card-img">
+                <img src="images/gen_kids.png" alt="Parque Infantil y Zona de Mascotas" class="card-img">
                 <div class="card-content">
                     <h3 class="card-title">Parque Infantil y Zona de Mascotas</h3>
                     <p class="card-desc">Espacios seguros donde tus hijos juegan y tus mascotas disfrutan al aire libre.</p>
                 </div>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/300x200/dddddd/999999?text=Terraza+BBQ" alt="Terraza BBQ" class="card-img">
+                <img src="images/gen_bbq.png" alt="Terraza BBQ" class="card-img">
                 <div class="card-content">
                     <h3 class="card-title">Terraza BBQ</h3>
                     <p class="card-desc">El lugar ideal para celebrar con los tuyos bajo los atardeceres del llano.</p>
@@ -186,7 +166,7 @@
             </div>
             
             <div class="ambiental-right">
-                <img src="https://via.placeholder.com/500x600/dddddd/999999?text=Building+Placeholder" alt="Edificio Skala" class="ambiental-image">
+                <img src="images/gen_building.png" alt="Edificio Skala" class="ambiental-image">
                 <div class="casa-logo">
                     <h2>CA</h2>
                     <h2>SA</h2>
@@ -215,7 +195,7 @@
                 </ul>
             </div>
             <div class="map-container">
-                <img src="https://via.placeholder.com/500x400/eeeeee/999999?text=Map+Placeholder" alt="Mapa">
+                <img src="images/gen_map.png" alt="Mapa" style="width: 100%; border-radius: 15px;">
             </div>
         </div>
     </section>

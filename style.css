@@ -901,3 +901,64 @@ footer {
     width: 100%;
   }
 }
+
+/* --- Hover Animations --- */
+
+/* Buttons */
+.btn-green, .btn-orange-large, .btn-orange-rect, .btn-dark-rect, .btn-outline, .form-submit button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-green:hover, .btn-orange-large:hover, .btn-orange-rect:hover, .btn-dark-rect:hover, .form-submit button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  background-color: var(--button-green);
+  color: white;
+  border-color: var(--button-green);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Floating Buttons */
+.btn-float-orange, .btn-float-green {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-float-orange:hover, .btn-float-green:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Images & Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.carousel-image, .ambiental-image, .map-container img {
+  transition: transform 0.5s ease;
+}
+
+.carousel-container:hover .carousel-image,
+.ambiental-right:hover .ambiental-image,
+.map-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Nav Links */
+.nav-links li a {
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-violet);
+  transform: scale(1.05);
+}
