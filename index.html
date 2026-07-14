@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skala - Kinku</title>
+    <link rel="icon" type="image/png" href="images/icon-kinku.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -48,6 +49,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="hero-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="address">Calle 15 # 40-20, Barzal Alto</span>
+                        <span class="city">Villavicencio, Meta</span>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -77,7 +85,6 @@
             </div>
             
             <div class="registration-form">
-                <h3>Regístrate aquí y recibe 15’000.000 de descuento</h3>
                 <div id="hubspot-form-container" style="margin-top: 20px;"></div>
                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
                 <script>
@@ -85,7 +92,54 @@
                     region: "na1",
                     portalId: "49317434",
                     formId: "c53ad587-9b5b-4b78-901f-63f83f70f852",
-                    target: "#hubspot-form-container"
+                    target: "#hubspot-form-container",
+                    cssClass: "kinku-hs-form",
+                    css: "",
+                    onFormReady: function($form) {
+                      if ($form && typeof $form.find === 'function') {
+                        // Style submit button with #E99E1E
+                        var btn = $form.find('input[type="submit"]');
+                        if (btn.length) {
+                          btn.css({
+                            'background-color': '#E99E1E',
+                            'background': '#E99E1E',
+                            'color': '#ffffff',
+                            'border': 'none',
+                            'border-radius': '25px',
+                            'padding': '12px 45px',
+                            'font-weight': '700',
+                            'font-family': "'Montserrat', sans-serif",
+                            'cursor': 'pointer',
+                            'transition': 'all 0.3s ease'
+                          });
+                          // Add hover effect
+                          btn.hover(
+                            function() { $(this).css({'background-color': '#d88f15', 'background': '#d88f15'}); },
+                            function() { $(this).css({'background-color': '#E99E1E', 'background': '#E99E1E'}); }
+                          );
+                        }
+                        
+                        // Style form fields
+                        $form.find('input[type="text"], input[type="email"], input[type="tel"], select').css({
+                          'padding': '14px',
+                          'border-radius': '20px',
+                          'border': '1px solid #ccc',
+                          'background-color': '#f4f4f4',
+                          'font-family': "'Montserrat', sans-serif",
+                          'font-size': '14px',
+                          'width': '100%',
+                          'color': '#3A3A3A'
+                        });
+                        
+                        // Style labels
+                        $form.find('label').css({
+                          'font-family': "'Montserrat', sans-serif",
+                          'color': '#3A3A3A',
+                          'font-weight': '500',
+                          'font-size': '14px'
+                        });
+                      }
+                    }
                   });
                 </script>
             </div>

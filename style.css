@@ -111,6 +111,54 @@ header {
   height: 100%;
 }
 
+.hero-location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 12px 25px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  width: auto;
+  align-self: center;
+}
+
+.hero-location:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero-location i {
+  font-size: 20px;
+  color: var(--form-orange);
+}
+
+.hero-location div {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hero-location .address {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.hero-location .city {
+  font-size: 11px;
+  opacity: 0.85;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+
+
 .pekin-title {
   font-size: 8rem;
   font-weight: 700;
@@ -264,18 +312,19 @@ header {
 }
 
 .registration-form {
-  background-color: var(--form-orange);
-  border-radius: 20px;
-  padding: 30px;
-  color: white;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+  color: var(--text-dark);
 }
 
 .registration-form h3 {
-  text-align: center;
+  text-align: left;
   font-size: 22px;
   font-weight: 700;
-  margin-bottom: 25px;
-  padding: 0 20px;
+  margin-bottom: 15px;
+  padding: 0;
+  color: var(--primary-violet);
 }
 
 .form-grid {
@@ -961,4 +1010,103 @@ footer {
 .nav-links li a:hover {
   color: var(--primary-violet);
   transform: scale(1.05);
+}
+
+/* HubSpot Form Styles */
+.kinku-hs-form {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.kinku-hs-form .hs-form {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 15px !important;
+}
+
+@media (min-width: 768px) {
+  .kinku-hs-form .hs-form {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .kinku-hs-form .hs_submit {
+    grid-column: span 2 !important;
+  }
+  .kinku-hs-form .hs_error-rollup {
+    grid-column: span 2 !important;
+  }
+}
+
+.kinku-hs-form label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: var(--text-dark) !important;
+  margin-bottom: 5px !important;
+  display: inline-block !important;
+}
+
+.kinku-hs-form input[type="text"],
+.kinku-hs-form input[type="email"],
+.kinku-hs-form input[type="tel"],
+.kinku-hs-form select {
+  width: 100% !important;
+  padding: 14px !important;
+  border-radius: 20px !important;
+  border: 1px solid #ccc !important;
+  font-family: var(--font-family) !important;
+  font-size: 14px !important;
+  background-color: #f4f4f4 !important;
+  color: var(--text-dark) !important;
+  box-sizing: border-box !important;
+}
+
+.kinku-hs-form input[type="text"]:focus,
+.kinku-hs-form input[type="email"]:focus,
+.kinku-hs-form input[type="tel"]:focus,
+.kinku-hs-form select:focus {
+  border-color: var(--form-orange) !important;
+  outline: none !important;
+}
+
+.kinku-hs-form .hs-button {
+  background-color: var(--form-orange) !important;
+  color: white !important;
+  padding: 12px 45px !important;
+  border-radius: 25px !important;
+  border: none !important;
+  font-weight: 700 !important;
+  font-family: var(--font-family) !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.kinku-hs-form .hs-button:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15) !important;
+  background-color: #d88f15 !important;
+}
+
+.kinku-hs-form .hs_submit {
+  display: flex !important;
+  justify-content: flex-end !important;
+  margin-top: 10px !important;
+}
+
+.kinku-hs-form .hs-form-booleancheckbox-display {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  color: var(--text-gray) !important;
+}
+
+.kinku-hs-form .hs-form-booleancheckbox-display input {
+  margin-top: 4px !important;
+  width: auto !important;
+}
+
+.kinku-hs-form .hs-form-booleancheckbox-display span {
+  line-height: 1.4 !important;
 }
