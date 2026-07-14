@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-violet: #61196F;
+  --form-orange: #E99E1E; 
+  --button-green: #15B99A;
+  --bg-beige: #FCF7F3;
+  --text-dark: #3A3A3A;
+  --text-gray: #6B6B6b;
+  --footer-bg: #323232;
+  --white: #ffffff;
+  --font-family: 'Montserrat', sans-serif;
+  --border-radius: 12px;
+  --bancolombia-orange: #f2a900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-dark);
+  background-color: var(--white);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links li a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-links li a i {
+  font-size: 10px;
+}
+
+.btn-green {
+  background-color: var(--button-green);
+  color: var(--white);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: stretch;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.skala-hero-container {
+  background-color: #61196F;
+  padding: 40px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.pekin-title {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary-violet);
+  line-height: 1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.carousel-wrapper {
+  position: relative;
+  border: 2px solid var(--primary-violet);
+  border-radius: 20px;
+  padding: 8px;
+  width: 100%;
+}
+
+.carousel-container {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.badge-novis {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--primary-violet);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+  z-index: 10;
+}
+
+.badge-trophy {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primary-violet);
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.carousel-controls i {
+  color: white;
+  background-color: rgba(0,0,0,0.3);
+  width: 30px; height: 30px;
+  display: flex; justify-content: center; align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+.carousel-dots span {
+  width: 6px; height: 6px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.carousel-dots span.active { opacity: 1; }
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dark);
+}
+.hero-subtitle span {
+  color: var(--primary-violet);
+}
+
+.hero-price {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+.hero-price span {
+  color: var(--primary-violet);
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--primary-violet);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-violet);
+}
+.stat-item:not(:last-child) {
+  border-right: 1px solid #eee;
+}
+
+.registration-form {
+  background-color: var(--form-orange);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+}
+
+.registration-form h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  padding: 0 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-group input, .form-group select {
+  padding: 14px;
+  border-radius: 20px;
+  border: none;
+  font-family: var(--font-family);
+  font-size: 14px;
+  background-color: #f4f4f4;
+}
+
+.phone-group {
+  display: flex;
+  gap: 5px;
+}
+
+.phone-group select {
+  width: 35%;
+}
+.phone-group input {
+  width: 65%;
+}
+
+.form-checkbox {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.form-checkbox input {
+  margin-top: 2px;
+}
+.form-checkbox a {
+  text-decoration: underline;
+  color: white;
+}
+
+.form-submit {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.form-submit button {
+  background-color: white;
+  color: var(--form-orange);
+  padding: 12px 45px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Zonas Sociales */
+.zonas-sociales {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 32px;
+  color: var(--primary-violet);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+}
+
+.btn-orange-large {
+  background-color: var(--primary-violet);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  background-color: #ddd;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  color: var(--primary-violet);
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* Ambientalmente Responsable */
+.ambiental-section {
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.ambiental-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--bg-beige);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  border: 1px solid #efe5de;
+  position: relative;
+}
+
+.ambiental-corner-top {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  background-color: #f3ae8c;
+  border-radius: 50%;
+  z-index: 10;
+}
+.ambiental-corner-bottom {
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 24px;
+  height: 24px;
+  background-color: #f3ae8c;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.ambiental-left {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ambiental-title {
+  font-size: 32px;
+  color: var(--primary-violet);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.ambiental-subtitle {
+  font-size: 13px;
+  margin-bottom: 30px;
+  color: var(--text-dark);
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #fcece3; 
+  color: var(--primary-violet);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.feature-text h4 {
+  color: var(--primary-violet);
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.feature-text p {
+  font-size: 12px;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.ambiental-right {
+  position: relative;
+  border-radius: 0 20px 20px 0;
+  overflow: hidden;
+}
+.ambiental-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #ccc;
+  display: block;
+}
+.casa-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 90px;
+  height: 90px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: var(--text-dark);
+}
+.casa-logo h2 {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* Corazon de Puente Aranda */
+.ubicacion-section {
+  padding: 60px 20px;
+  background-color: var(--white);
+}
+
+.ubicacion-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: var(--bg-beige);
+  padding: 20px;
+}
+.ubicacion-header h2 {
+  font-size: 32px;
+  color: var(--primary-violet);
+  font-weight: 800;
+}
+.ubicacion-header-text {
+  text-align: center;
+  font-size: 15px;
+  margin: 20px 0;
+}
+
+.ubicacion-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ubicacion-card {
+  background-color: var(--bg-beige);
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+
+.ubicacion-card h3 {
+  color: var(--primary-violet);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ubicacion-card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.ubicacion-list {
+  list-style: none;
+}
+.ubicacion-list li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+.ubicacion-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-violet);
+  border-radius: 50%;
+}
+
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--primary-violet);
+  padding: 2px;
+}
+.map-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fiducia Section */
+.fiducia-section {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.fiducia-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.fiducia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #15b99a;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.fiducia-title {
+  color: var(--primary-violet);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fiducia-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.btn-orange-rect {
+  background-color: var(--bancolombia-orange);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.btn-dark-rect {
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  border: none;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.bancolombia-logo {
+  font-size: 32px;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fiducia-info h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.fiducia-info p {
+  font-size: 12px;
+  color: var(--text-gray);
+  margin-bottom: 15px;
+}
+.fiducia-highlight {
+  color: var(--primary-violet);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 60px 10% 20px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer-logo img {
+  height: 50px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+.footer-slogan {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--button-green);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-column h5 {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.footer-column ul {
+  list-style: none;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  font-size: 12px;
+  color: #ddd;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.footer-bottom-text {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 15px;
+}
+.btn-outline {
+  border: 1px solid var(--button-green);
+  color: var(--button-green);
+  background: transparent;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Floating Buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.btn-float-orange {
+  background-color: var(--bancolombia-orange);
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+  text-decoration: none;
+}
+.btn-float-orange i {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.btn-float-green {
+  background-color: #128c7e;
+  color: white;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 40px;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ambiental-container {
+    grid-template-columns: 1fr;
+  }
+  .ambiental-right {
+    height: 300px;
+    border-radius: 0 0 20px 20px;
+  }
+  .ubicacion-content {
+    grid-template-columns: 1fr;
+  }
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 15px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .fiducia-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .fiducia-buttons {
+    width: 100%;
+  }
+}
