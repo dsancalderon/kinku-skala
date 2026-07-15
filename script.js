@@ -100,11 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <div class="apt-price">${apartment.Price}</div>
                 <div class="apt-terms">Aplican términos y condiciones</div>
-                
-                <a href="#" class="btn-float-orange apt-calcular-btn">
-                    <i class="fa-solid fa-calculator"></i>
-                    <span>Calcular<br>cuota</span>
-                </a>
             </div>
         `;
     }
