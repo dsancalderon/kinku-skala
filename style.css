@@ -734,89 +734,139 @@ header {
 /* Fiducia Section */
 .fiducia-section {
   padding: 60px 20px;
-  background-color: #f7f7f7;
+  background-color: var(--white);
 }
 
 .fiducia-card {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  background-color: white;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.fiducia-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid #15b99a;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.fiducia-left {
+  flex: 1;
+  max-width: 800px;
+}
+
+.fiducia-header-wrapper {
+  margin-bottom: 25px;
 }
 
 .fiducia-title {
-  color: var(--primary-violet);
-  font-size: 20px;
+  color: var(--form-orange);
+  font-size: 24px;
   font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.fiducia-line {
+  width: 150px;
+  height: 2px;
+  background-color: var(--button-green);
+}
+
+.fiducia-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 320px;
+  padding-top: 5px;
 }
 
 .fiducia-buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  width: 250px;
+  gap: 15px;
+  width: 100%;
+}
+
+.btn-orange-rect, .btn-dark-rect {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .btn-orange-rect {
-  background-color: var(--bancolombia-orange);
+  background-color: var(--form-orange);
   color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-weight: 700;
-  border: none;
-  text-align: center;
-  font-size: 11px;
-  text-transform: uppercase;
 }
+.btn-orange-rect:hover {
+  background-color: #d88f15;
+}
+
 .btn-dark-rect {
   background-color: #333;
   color: white;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-weight: 700;
-  border: none;
-  text-align: center;
-  font-size: 11px;
-  text-transform: uppercase;
+}
+.btn-dark-rect:hover {
+  background-color: #111;
 }
 
 .bancolombia-logo {
-  font-size: 32px;
-  font-weight: 800;
-  color: black;
   margin-bottom: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
+}
+
+.bancolombia-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
 }
 
 .fiducia-info h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #333;
+  font-weight: 500;
 }
-.fiducia-info p {
-  font-size: 12px;
-  color: var(--text-gray);
-  margin-bottom: 15px;
+.fiducia-subtitle-text {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 300;
 }
 .fiducia-highlight {
-  color: var(--primary-violet);
-  font-size: 11px;
+  color: var(--form-orange);
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 15px;
+}
+.fiducia-info p:not(.fiducia-subtitle-text) {
+  font-size: 13px;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Responsive Design for Fiducia Card */
+@media (max-width: 900px) {
+  .fiducia-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .fiducia-right {
+    width: 100%;
+    max-width: 320px;
+  }
+  .bancolombia-logo {
+    font-size: 32px;
+  }
 }
 
 /* Footer */
