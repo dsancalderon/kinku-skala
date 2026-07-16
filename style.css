@@ -48,6 +48,10 @@
   background-color: var(--white);
   line-height: 1.5;
   overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
   padding-top: 75px;
 }
 
@@ -824,7 +828,7 @@ header {
 .bancolombia-logo img {
   max-width: 100%;
   height: auto;
-  max-height: 40px;
+  max-height: 80px;
   object-fit: contain;
 }
 
