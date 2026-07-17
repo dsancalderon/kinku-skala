@@ -1087,15 +1087,21 @@ footer {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
-
-.carousel-image, .ambiental-image, .map-container img {
+.carousel-image, .map-container img {
   transition: transform 0.5s ease;
 }
 
 .carousel-container:hover .carousel-image,
-.ambiental-right:hover .ambiental-image,
 .map-container:hover img {
   transform: scale(1.04);
+}
+
+.ambiental-image {
+  transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ambiental-image.zoomed {
+  transform: scale(1.08);
 }
 
 /* Nav Links */

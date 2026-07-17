@@ -131,4 +131,24 @@ document.addEventListener('DOMContentLoaded', () => {
     if (apartments.length > 0) {
         renderCard(apartments[0]);
     }
+
+    // Scroll animation for the "Ambientalmente Responsable" section image
+    const ambientalSection = wrapper.querySelector('.ambiental-section');
+    const ambientalImage = wrapper.querySelector('.ambiental-image');
+
+    if (ambientalSection && ambientalImage) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ambientalImage.classList.add('zoomed');
+                } else {
+                    ambientalImage.classList.remove('zoomed');
+                }
+            });
+        }, {
+            // Trigger when at least 25% of the section is visible in the viewport
+            threshold: 0.90
+        });
+        observer.observe(ambientalSection);
+    }
 });
