@@ -130,7 +130,7 @@
 }
 
 #skala-landing-wrapper .skala-hero-container {
-  background-color: #61196F;
+  background-color: white;
   padding: 40px;
   border-radius: 25px;
   display: flex;
@@ -138,6 +138,8 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  border: 1px solid #efe5de;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 #skala-landing-wrapper .hero-location {
@@ -146,7 +148,7 @@
   align-items: center;
   gap: 20px;
   margin-top: 25px;
-  color: white;
+  color: var(--primary-violet);
   width: auto;
   align-self: center;
 }
@@ -184,25 +186,25 @@
 }
 
 #skala-landing-wrapper .btn-location-link {
-  color: white;
+  color: var(--primary-violet);
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(97, 25, 111, 0.08);
   padding: 8px 20px;
   border-radius: 20px;
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  border: 1.5px solid rgba(97, 25, 111, 0.3);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 #skala-landing-wrapper .btn-location-link:hover {
   transform: translateY(-2px);
-  background-color: white;
-  color: #61196F;
-  border-color: white;
+  background-color: var(--primary-violet);
+  color: white;
+  border-color: var(--primary-violet);
 }
 
 
